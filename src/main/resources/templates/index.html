@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>2048 Game</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<div class="container">
+    <h1>2048</h1>
+    <div class="controls">
+        <button id="restartBtn">Restart</button>
+        <div class="score">Score: <span id="score">0</span></div>
+    </div>
+
+    <div id="board" class="board" data-size="4"></div>
+
+    <div id="messages"></div>
+    <p class="hint">Use arrow keys or on-screen buttons to move.</p>
+    <div class="mobile-controls">
+        <button data-dir="UP">↑</button>
+        <div>
+            <button data-dir="LEFT">←</button>
+            <button data-dir="DOWN">↓</button>
+            <button data-dir="RIGHT">→</button>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/js/game.js}"></script>
+</body>
+</html>
